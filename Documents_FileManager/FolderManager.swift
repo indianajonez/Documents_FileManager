@@ -4,8 +4,7 @@
 //
 //  Created by Ekaterina Saveleva on 22.07.2023.
 //
-
-import Foundation
+import UIKit
 
 class FolderManager {
     
@@ -13,7 +12,6 @@ class FolderManager {
     // MARK: - Public properties
     
     var pathForCurrentFolder: String
-    
     // вычисляемое свойство выводит все файлы и папки в массив
     var items: [String] {
        (try? FileManager.default.contentsOfDirectory(atPath: pathForCurrentFolder)) ?? []
@@ -31,7 +29,6 @@ class FolderManager {
     }
     
     
-    
     // MARK: - Public methods
     
     
@@ -44,8 +41,11 @@ class FolderManager {
        try? FileManager.default.createDirectory(atPath: pathForCurrentFolder + "/" + name, withIntermediateDirectories: true)
     }
         
-    func addPhoto(path: String, image: Data) {
-        FileManager.default.createFile(atPath: path, contents: image)
+    func addPhoto(image: UIImage) {
+        if let data = image.jpegData(compressionQuality: 1) {
+            let path = URL(filePath: pathForCurrentFolder + "/").appendingPathExtension(String(describing: image) + ".png")
+             try? data.write(to: path)
+        }
     }
     
     //метод, который позволяет отсортировать папки и файлы. Этот код надо просто запомнить:)
@@ -60,12 +60,10 @@ class FolderManager {
     
     func getFullPath(atIndex index: Int) -> String {
         pathForCurrentFolder + "/" + items[index]
-        
     }
     
     func deleteItem(atIndex index: Int) {
         let path = pathForCurrentFolder + "/" + items[index]
-        
         try? FileManager.default.removeItem(atPath: path)
     }
 }

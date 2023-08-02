@@ -12,10 +12,16 @@ public protocol ImagePickerDelegate: class {
 }
 
 open class ImagePicker: NSObject {
+    
+    
+    // MARK: - Private properties
 
     private let pickerController: UIImagePickerController
     private weak var presentationController: UIViewController?
     private weak var delegate: ImagePickerDelegate?
+    
+    
+    // MARK: - Init
 
     public init(presentationController: UIViewController, delegate: ImagePickerDelegate) {
         self.pickerController = UIImagePickerController()
@@ -29,6 +35,9 @@ open class ImagePicker: NSObject {
         self.pickerController.allowsEditing = true
         self.pickerController.mediaTypes = ["public.image"]
     }
+    
+    
+    // MARK: - Private methods
 
     private func action(for type: UIImagePickerController.SourceType, title: String) -> UIAlertAction? {
         guard UIImagePickerController.isSourceTypeAvailable(type) else {
@@ -73,6 +82,10 @@ open class ImagePicker: NSObject {
     }
 }
 
+
+
+// MARK: - UIImagePickerControllerDelegate
+
 extension ImagePicker: UIImagePickerControllerDelegate {
 
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -87,6 +100,10 @@ extension ImagePicker: UIImagePickerControllerDelegate {
         self.pickerController(picker, didSelect: image)
     }
 }
+
+
+
+// MARK: - UINavigationControllerDelegate
 
 extension ImagePicker: UINavigationControllerDelegate {
 

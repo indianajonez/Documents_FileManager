@@ -62,13 +62,13 @@
 			children = (
 				F370495D2A6C58D300C405B3 /* AppDelegate.swift */,
 				F370495F2A6C58D300C405B3 /* SceneDelegate.swift */,
+				F37049732A6C60A100C405B3 /* FolderManager.swift */,
 				F37049612A6C58D300C405B3 /* ViewController.swift */,
+				F37049712A6C5A1100C405B3 /* CustomTableViewCell.swift */,
+				F38465392A7568CF000BD2B9 /* ImagePicker.swift */,
 				F37049662A6C58D700C405B3 /* Assets.xcassets */,
 				F37049682A6C58D700C405B3 /* LaunchScreen.storyboard */,
 				F370496B2A6C58D700C405B3 /* Info.plist */,
-				F37049712A6C5A1100C405B3 /* CustomTableViewCell.swift */,
-				F37049732A6C60A100C405B3 /* FolderManager.swift */,
-				F38465392A7568CF000BD2B9 /* ImagePicker.swift */,
 			);
 			path = Documents_FileManager;
 			sourceTree = "<group>";

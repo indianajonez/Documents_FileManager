@@ -9,18 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    // MARK: - Public properties
+    
+    
     let manager = FolderManager()
-    //let vc = ViewController()
-    var nameofNewFolder: UILabel!
+    var nameofNewFolder = ""
+    var imagePicker: ImagePicker!
+    
+    
+    // MARK: - Private properties
     
     private lazy var buttonNewFolder = UIBarButtonItem(image: UIImage(systemName: "plus.rectangle.on.folder"), style: .plain, target: self, action: #selector(plusNewFolder))
     
     private lazy var buttonNewFile = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(plusNewFile))
     
-    private var imageView: UIImageView!
-    var imagePicker: ImagePicker!
-
-        
     private lazy var tableOfData: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +32,9 @@ class ViewController: UIViewController {
         table.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.id)
         return table
     }()
-
+    
+    
+    // MARK: - Lifecycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,35 +46,37 @@ class ViewController: UIViewController {
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
     }
     
-    private func createButton() {
-        navigationItem.rightBarButtonItems = [buttonNewFile, buttonNewFolder]
-            
-    }
     
-    @objc private func plusNewFolder() {
-        self.nameofNewFolder?.text = "Folder,"
-        self.alert(title:"Внимание!", message: "Ведите название папки", style: .alert)
-        manager.addFolder(name: "New Folder") // поженить с алерта
-        tableOfData.reloadData()
-    }
+    // MARK: - Public methods
     
     func alert(title: String, message: String, style: UIAlertController.Style) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let action = UIAlertAction(title: "Ok", style: .default) { (action) in
             let text = alertController.textFields?.first
-            self.nameofNewFolder.text! += (text?.text!)! + ("!")
+            self.nameofNewFolder += text?.text ?? ""
+            self.manager.addFolder(name: self.nameofNewFolder)
+            self.tableOfData.reloadData()
         }
         alertController.addTextField() { (textField) in
-            textField.isSecureTextEntry = false // скрыте текста 
+            textField.isSecureTextEntry = false // скрыте текста
         }
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }
     
+    
+    // MARK: - Private methods
+    
+    private func createButton() {
+        navigationItem.rightBarButtonItems = [buttonNewFile, buttonNewFolder]
+    }
+    
+    @objc private func plusNewFolder() {
+        self.alert(title:"Внимание!", message: "Ведите название папки", style: .alert)
+    }
+    
     @objc private func plusNewFile(_ sender: UIButton) {
-        manager.addFolder(name: "file.txt\(Int.random(in: 0...10000))")
         self.imagePicker.present(from: sender)
-        tableOfData.reloadData()
     }
     
     private func layout() {
@@ -84,11 +91,15 @@ class ViewController: UIViewController {
     }
 }
 
+
+
 // MARK: - UITableViewDelegate
 
 extension ViewController: UITableViewDelegate {
     
 }
+
+
 
 // MARK: - UITableViewDataSource
 
@@ -103,8 +114,9 @@ extension ViewController: UITableViewDataSource {
         return cell
         
     }
-    
 }
+
+
 
 // MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
@@ -112,6 +124,10 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: ImagePickerDelegate {
 
     func didSelect(image: UIImage?) {
-        self.imageView.image = image
+        if let image = image {
+            self.manager.addPhoto(image: image)
+            self.tableOfData.reloadData()
+        }
     }
 }
+
