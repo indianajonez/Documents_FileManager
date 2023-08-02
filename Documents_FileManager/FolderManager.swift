@@ -43,7 +43,7 @@ class FolderManager {
         
     func addPhoto(image: UIImage) {
         if let data = image.jpegData(compressionQuality: 1) {
-            let path = URL(filePath: pathForCurrentFolder + "/").appendingPathExtension(String(describing: image) + ".png")
+            let path = URL(filePath: pathForCurrentFolder + "/" + String(describing: image))
              try? data.write(to: path)
         }
     }
