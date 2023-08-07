@@ -9,25 +9,54 @@
 /* Begin PBXBuildFile section */
 		F370495E2A6C58D300C405B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370495D2A6C58D300C405B3 /* AppDelegate.swift */; };
 		F37049602A6C58D300C405B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F370495F2A6C58D300C405B3 /* SceneDelegate.swift */; };
-		F37049622A6C58D300C405B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37049612A6C58D300C405B3 /* ViewController.swift */; };
+		F37049622A6C58D300C405B3 /* ViewController-delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37049612A6C58D300C405B3 /* ViewController-delete.swift */; };
 		F37049672A6C58D700C405B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F37049662A6C58D700C405B3 /* Assets.xcassets */; };
 		F370496A2A6C58D700C405B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F37049682A6C58D700C405B3 /* LaunchScreen.storyboard */; };
-		F37049722A6C5A1100C405B3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37049712A6C5A1100C405B3 /* CustomTableViewCell.swift */; };
-		F37049742A6C60A100C405B3 /* FolderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37049732A6C60A100C405B3 /* FolderManager.swift */; };
-		F384653A2A7568CF000BD2B9 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38465392A7568CF000BD2B9 /* ImagePicker.swift */; };
+		F37049722A6C5A1100C405B3 /* CustomTableViewCell-delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37049712A6C5A1100C405B3 /* CustomTableViewCell-delete.swift */; };
+		F37049742A6C60A100C405B3 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37049732A6C60A100C405B3 /* FileManagerService.swift */; };
+		F384653A2A7568CF000BD2B9 /* ImagePicker-delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38465392A7568CF000BD2B9 /* ImagePicker-delete.swift */; };
+		F3A9B7DF2A7D214F005E4A0C /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7DE2A7D214F005E4A0C /* KeychainManager.swift */; };
+		F3A9B7E22A7D220B005E4A0C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = F3A9B7E12A7D220B005E4A0C /* KeychainAccess */; };
+		F3A9B7E62A7D277F005E4A0C /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7E52A7D277F005E4A0C /* LoginInput.swift */; };
+		F3A9B7E82A7D27C2005E4A0C /* LoginBulder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7E72A7D27C2005E4A0C /* LoginBulder.swift */; };
+		F3A9B7EA2A7D282A005E4A0C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7E92A7D282A005E4A0C /* LoginViewModel.swift */; };
+		F3A9B7EC2A7D286A005E4A0C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7EB2A7D286A005E4A0C /* LoginPresenter.swift */; };
+		F3A9B7EE2A7D28B4005E4A0C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7ED2A7D28B4005E4A0C /* LoginInteractor.swift */; };
+		F3A9B7F02A7D2924005E4A0C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7EF2A7D2924005E4A0C /* LoginViewController.swift */; };
+		F3A9B7F22A7D29F5005E4A0C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7F12A7D29F5005E4A0C /* LoginView.swift */; };
+		F3A9B7F42A7D2A37005E4A0C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7F32A7D2A37005E4A0C /* LoginRouter.swift */; };
+		F3A9B7F72A7D2AB0005E4A0C /* TabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7F62A7D2AB0005E4A0C /* TabBarFactory.swift */; };
+		F3A9B7F92A7D2AE7005E4A0C /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7F82A7D2AE7005E4A0C /* TabBarViewController.swift */; };
+		F3A9B7FB2A7D2B3F005E4A0C /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7FA2A7D2B3F005E4A0C /* FilesViewController.swift */; };
+		F3A9B7FE2A7D2BE0005E4A0C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7FD2A7D2BE0005E4A0C /* SettingsViewController.swift */; };
+		F3A9B8002A7D2C05005E4A0C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A9B7FF2A7D2C05005E4A0C /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F370495A2A6C58D300C405B3 /* Documents_FileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Documents_FileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F370495D2A6C58D300C405B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F370495F2A6C58D300C405B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F37049612A6C58D300C405B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F37049612A6C58D300C405B3 /* ViewController-delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController-delete.swift"; sourceTree = "<group>"; };
 		F37049662A6C58D700C405B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F37049692A6C58D700C405B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F370496B2A6C58D700C405B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F37049712A6C5A1100C405B3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		F37049732A6C60A100C405B3 /* FolderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderManager.swift; sourceTree = "<group>"; };
-		F38465392A7568CF000BD2B9 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		F37049712A6C5A1100C405B3 /* CustomTableViewCell-delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomTableViewCell-delete.swift"; sourceTree = "<group>"; };
+		F37049732A6C60A100C405B3 /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
+		F38465392A7568CF000BD2B9 /* ImagePicker-delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImagePicker-delete.swift"; sourceTree = "<group>"; };
+		F3A9B7DE2A7D214F005E4A0C /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		F3A9B7E52A7D277F005E4A0C /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
+		F3A9B7E72A7D27C2005E4A0C /* LoginBulder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBulder.swift; sourceTree = "<group>"; };
+		F3A9B7E92A7D282A005E4A0C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F3A9B7EB2A7D286A005E4A0C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		F3A9B7ED2A7D28B4005E4A0C /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		F3A9B7EF2A7D2924005E4A0C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F3A9B7F12A7D29F5005E4A0C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F3A9B7F32A7D2A37005E4A0C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		F3A9B7F62A7D2AB0005E4A0C /* TabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFactory.swift; sourceTree = "<group>"; };
+		F3A9B7F82A7D2AE7005E4A0C /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F3A9B7FA2A7D2B3F005E4A0C /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
+		F3A9B7FD2A7D2BE0005E4A0C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F3A9B7FF2A7D2C05005E4A0C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A9B7E22A7D220B005E4A0C /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,17 +90,63 @@
 		F370495C2A6C58D300C405B3 /* Documents_FileManager */ = {
 			isa = PBXGroup;
 			children = (
-				F370495D2A6C58D300C405B3 /* AppDelegate.swift */,
-				F370495F2A6C58D300C405B3 /* SceneDelegate.swift */,
-				F37049732A6C60A100C405B3 /* FolderManager.swift */,
-				F37049612A6C58D300C405B3 /* ViewController.swift */,
-				F37049712A6C5A1100C405B3 /* CustomTableViewCell.swift */,
-				F38465392A7568CF000BD2B9 /* ImagePicker.swift */,
+				F3A9B7E32A7D2222005E4A0C /* App */,
+				F3A9B7E42A7D2737005E4A0C /* LoginVIPERModel */,
+				F3A9B7F52A7D2A85005E4A0C /* TabBar */,
+				F3A9B7FA2A7D2B3F005E4A0C /* FilesViewController.swift */,
+				F37049732A6C60A100C405B3 /* FileManagerService.swift */,
+				F3A9B7FC2A7D2BA0005E4A0C /* Settings */,
+				F3A9B7DE2A7D214F005E4A0C /* KeychainManager.swift */,
+				F37049612A6C58D300C405B3 /* ViewController-delete.swift */,
+				F37049712A6C5A1100C405B3 /* CustomTableViewCell-delete.swift */,
+				F38465392A7568CF000BD2B9 /* ImagePicker-delete.swift */,
 				F37049662A6C58D700C405B3 /* Assets.xcassets */,
 				F37049682A6C58D700C405B3 /* LaunchScreen.storyboard */,
 				F370496B2A6C58D700C405B3 /* Info.plist */,
 			);
 			path = Documents_FileManager;
+			sourceTree = "<group>";
+		};
+		F3A9B7E32A7D2222005E4A0C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F370495D2A6C58D300C405B3 /* AppDelegate.swift */,
+				F370495F2A6C58D300C405B3 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F3A9B7E42A7D2737005E4A0C /* LoginVIPERModel */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9B7E52A7D277F005E4A0C /* LoginInput.swift */,
+				F3A9B7E72A7D27C2005E4A0C /* LoginBulder.swift */,
+				F3A9B7E92A7D282A005E4A0C /* LoginViewModel.swift */,
+				F3A9B7EB2A7D286A005E4A0C /* LoginPresenter.swift */,
+				F3A9B7ED2A7D28B4005E4A0C /* LoginInteractor.swift */,
+				F3A9B7EF2A7D2924005E4A0C /* LoginViewController.swift */,
+				F3A9B7F12A7D29F5005E4A0C /* LoginView.swift */,
+				F3A9B7F32A7D2A37005E4A0C /* LoginRouter.swift */,
+			);
+			path = LoginVIPERModel;
+			sourceTree = "<group>";
+		};
+		F3A9B7F52A7D2A85005E4A0C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9B7F62A7D2AB0005E4A0C /* TabBarFactory.swift */,
+				F3A9B7F82A7D2AE7005E4A0C /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		F3A9B7FC2A7D2BA0005E4A0C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9B7FD2A7D2BE0005E4A0C /* SettingsViewController.swift */,
+				F3A9B7FF2A7D2C05005E4A0C /* SettingsView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +165,9 @@
 			dependencies = (
 			);
 			name = Documents_FileManager;
+			packageProductDependencies = (
+				F3A9B7E12A7D220B005E4A0C /* KeychainAccess */,
+			);
 			productName = Documents_FileManager;
 			productReference = F370495A2A6C58D300C405B3 /* Documents_FileManager.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +196,9 @@
 				Base,
 			);
 			mainGroup = F37049512A6C58D300C405B3;
+			packageReferences = (
+				F3A9B7E02A7D220B005E4A0C /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = F370495B2A6C58D300C405B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -143,12 +225,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F37049622A6C58D300C405B3 /* ViewController.swift in Sources */,
+				F37049622A6C58D300C405B3 /* ViewController-delete.swift in Sources */,
 				F370495E2A6C58D300C405B3 /* AppDelegate.swift in Sources */,
-				F37049722A6C5A1100C405B3 /* CustomTableViewCell.swift in Sources */,
-				F384653A2A7568CF000BD2B9 /* ImagePicker.swift in Sources */,
+				F3A9B7F72A7D2AB0005E4A0C /* TabBarFactory.swift in Sources */,
+				F3A9B7DF2A7D214F005E4A0C /* KeychainManager.swift in Sources */,
+				F37049722A6C5A1100C405B3 /* CustomTableViewCell-delete.swift in Sources */,
+				F3A9B8002A7D2C05005E4A0C /* SettingsView.swift in Sources */,
+				F3A9B7FE2A7D2BE0005E4A0C /* SettingsViewController.swift in Sources */,
+				F3A9B7EC2A7D286A005E4A0C /* LoginPresenter.swift in Sources */,
+				F3A9B7E82A7D27C2005E4A0C /* LoginBulder.swift in Sources */,
+				F3A9B7E62A7D277F005E4A0C /* LoginInput.swift in Sources */,
+				F384653A2A7568CF000BD2B9 /* ImagePicker-delete.swift in Sources */,
+				F3A9B7F92A7D2AE7005E4A0C /* TabBarViewController.swift in Sources */,
+				F3A9B7F42A7D2A37005E4A0C /* LoginRouter.swift in Sources */,
+				F3A9B7F22A7D29F5005E4A0C /* LoginView.swift in Sources */,
+				F3A9B7EE2A7D28B4005E4A0C /* LoginInteractor.swift in Sources */,
 				F37049602A6C58D300C405B3 /* SceneDelegate.swift in Sources */,
-				F37049742A6C60A100C405B3 /* FolderManager.swift in Sources */,
+				F3A9B7EA2A7D282A005E4A0C /* LoginViewModel.swift in Sources */,
+				F3A9B7F02A7D2924005E4A0C /* LoginViewController.swift in Sources */,
+				F3A9B7FB2A7D2B3F005E4A0C /* FilesViewController.swift in Sources */,
+				F37049742A6C60A100C405B3 /* FileManagerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3A9B7E02A7D220B005E4A0C /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3A9B7E12A7D220B005E4A0C /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3A9B7E02A7D220B005E4A0C /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F37049522A6C58D300C405B3 /* Project object */;
 }
